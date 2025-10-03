@@ -13,7 +13,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -33,14 +33,15 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl text-muted-foreground text-pretty max-w-2xl mx-auto leading-relaxed">
             고품질 타일 컬렉션으로 당신의 집이나 사업장을 변화시켜보세요. 장인정신과 시대를 초월한 디자인이 만나는 곳입니다.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-row gap-3 md:gap-4 justify-center items-center pt-4">
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 group"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base md:text-lg px-4 md:px-8 py-4 md:py-6 group flex-1 sm:flex-none"
             >
-              견적 요청하기
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <span className="hidden sm:inline">견적 요청하기</span>
+              <span className="sm:hidden">견적 요청</span>
+              <ArrowRight className="ml-1 md:ml-2 group-hover:translate-x-1 transition-transform w-4 h-4 md:w-5 md:h-5" />
             </Button>
             <Button
               size="lg"
@@ -49,9 +50,10 @@ export function HeroSection() {
                 const element = document.getElementById("gallery")
                 if (element) element.scrollIntoView({ behavior: "smooth" })
               }}
-              className="text-lg px-8 py-6 border-2"
+              className="text-base md:text-lg px-4 md:px-8 py-4 md:py-6 border-2 flex-1 sm:flex-none"
             >
-              컬렉션 보기
+              <span className="hidden sm:inline">컬렉션 보기</span>
+              <span className="sm:hidden">컬렉션</span>
             </Button>
           </div>
         </div>

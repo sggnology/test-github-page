@@ -212,7 +212,7 @@ export function ContactSection() {
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-lg"
               >
                 <Eye className="w-5 h-5 mr-2" />
-                {isSubmitting ? "전송 중..." : "미리보기"}
+                {isSubmitting ? "전송 중..." : "전송하기"}
               </Button>
 
               <Dialog open={isPreviewOpen} onOpenChange={setIsPreviewOpen}>
