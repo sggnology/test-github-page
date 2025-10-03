@@ -5,8 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
+  // Temporarily disable basePath for testing
+  // basePath: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
 };
 
 export default nextConfig;
