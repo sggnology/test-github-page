@@ -11,34 +11,34 @@ import placeholderImage from "@/assets/placeholder.svg"
 
 const collections = [
   {
-    title: "Marble Elegance",
+    title: "대리석 컬렉션",
     image: marbleImage,
-    description: "Timeless marble designs",
+    description: "시대를 초월한 대리석 디자인",
   },
   {
-    title: "Wood-Look Porcelain",
+    title: "우드룩 포세린",
     image: woodImage,
-    description: "Natural warmth, modern durability",
+    description: "자연스러운 따뜻함과 현대적 내구성",
   },
   {
-    title: "Geometric Patterns",
+    title: "기하학 패턴",
     image: geometricImage,
-    description: "Bold contemporary statements",
+    description: "대담한 현대적 스타일",
   },
   {
-    title: "Terracotta Collection",
+    title: "테라코타 컬렉션",
     image: terracottaImage,
-    description: "Mediterranean charm",
+    description: "지중해의 매력",
   },
   {
-    title: "Slate & Stone",
+    title: "슬레이트 & 스톤",
     image: slateImage,
-    description: "Rugged natural beauty",
+    description: "거친 자연의 아름다움",
   },
   {
-    title: "Mosaic Artistry",
+    title: "모자이크 아트",
     image: mosaicImage,
-    description: "Intricate handcrafted details",
+    description: "정교한 수공예 디테일",
   },
 ]
 
@@ -49,9 +49,9 @@ export function ProductGallery() {
     <section id="gallery" className="py-24 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Explore Our Collections</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">컬렉션 둘러보기</h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            Discover the perfect tiles to bring your vision to life
+            당신의 비전을 현실로 만들어줄 완벽한 타일을 찾아보세요
           </p>
         </div>
 

@@ -3,23 +3,23 @@ import { Shield, Sparkles, Leaf, Wrench } from "lucide-react"
 const features = [
   {
     icon: Shield,
-    title: "Unmatched Durability",
-    description: "Built to last decades with superior resistance to wear, moisture, and daily use.",
+    title: "뛰어난 내구성",
+    description: "수십 년을 버틸 수 있는 우수한 내마모성, 방수성, 일상 사용 저항성을 자랑합니다.",
   },
   {
     icon: Sparkles,
-    title: "Unique Designs",
-    description: "Curated collections featuring exclusive patterns and textures from around the world.",
+    title: "독특한 디자인",
+    description: "전 세계에서 엄선한 독점적인 패턴과 텍스처로 구성된 큐레이션 컬렉션입니다.",
   },
   {
     icon: Leaf,
-    title: "Eco-Friendly Materials",
-    description: "Sustainably sourced materials with minimal environmental impact and maximum beauty.",
+    title: "친환경 소재",
+    description: "환경 영향을 최소화하면서 최대한의 아름다움을 구현하는 지속 가능한 소재를 사용합니다.",
   },
   {
     icon: Wrench,
-    title: "Easy Installation",
-    description: "Precision-cut tiles designed for seamless installation by professionals or DIY enthusiasts.",
+    title: "간편한 시공",
+    description: "전문가나 DIY 애호가 모두 원활하게 설치할 수 있도록 정밀 가공된 타일입니다.",
   },
 ]
 
@@ -28,9 +28,9 @@ export function FeaturesSection() {
     <section id="features" className="py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Why Choose Our Tiles</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">P&P 타일을 선택하는 이유</h2>
           <p className="text-lg text-muted-foreground text-pretty">
-            Premium quality meets exceptional design in every tile we offer
+            저희가 제공하는 모든 타일에는 프리미엄 품질과 뛰어난 디자인이 함께합니다
           </p>
         </div>
 

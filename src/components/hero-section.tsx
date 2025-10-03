@@ -28,11 +28,10 @@ export function HeroSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-balance leading-tight">
-            Elevate Your Space with <span className="text-primary">Premium Tiles</span>
+            <span className="text-primary">프리미엄 타일</span>로 공간을 완성하세요
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground text-pretty max-w-2xl mx-auto leading-relaxed">
-            Transform your home or business with our exquisite collection of high-quality tiles. Where craftsmanship
-            meets timeless design.
+            고품질 타일 컬렉션으로 당신의 집이나 사업장을 변화시켜보세요. 장인정신과 시대를 초월한 디자인이 만나는 곳입니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button
@@ -40,7 +39,7 @@ export function HeroSection() {
               onClick={scrollToContact}
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 group"
             >
-              Request a Quote
+              견적 요청하기
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -52,7 +51,7 @@ export function HeroSection() {
               }}
               className="text-lg px-8 py-6 border-2"
             >
-              View Collections
+              컬렉션 보기
             </Button>
           </div>
         </div>

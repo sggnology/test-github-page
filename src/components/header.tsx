@@ -36,7 +36,7 @@ export function Header() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-xl">T</span>
             </div>
-            <span className="text-xl font-bold text-foreground">TileCraft</span>
+            <span className="text-xl font-bold text-foreground">P&P 타일</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -45,31 +45,31 @@ export function Header() {
               onClick={() => scrollToSection("features")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Features
+              특징
             </button>
             <button
               onClick={() => scrollToSection("gallery")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Gallery
+              갤러리
             </button>
             <button
               onClick={() => scrollToSection("about")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              About
+              회사소개
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
-              Testimonials
+              고객후기
             </button>
             <Button
               onClick={() => scrollToSection("contact")}
               className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
-              Get a Quote
+              견적 요청
             </Button>
           </nav>
 
@@ -87,31 +87,31 @@ export function Header() {
                 onClick={() => scrollToSection("features")}
                 className="text-foreground/80 hover:text-foreground transition-colors text-left"
               >
-                Features
+                특징
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
                 className="text-foreground/80 hover:text-foreground transition-colors text-left"
               >
-                Gallery
+                갤러리
               </button>
               <button
                 onClick={() => scrollToSection("about")}
                 className="text-foreground/80 hover:text-foreground transition-colors text-left"
               >
-                About
+                회사소개
               </button>
               <button
                 onClick={() => scrollToSection("testimonials")}
                 className="text-foreground/80 hover:text-foreground transition-colors text-left"
               >
-                Testimonials
+                고객후기
               </button>
               <Button
                 onClick={() => scrollToSection("contact")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 w-full"
               >
-                Get a Quote
+                견적 요청
               </Button>
             </div>
           </nav>
