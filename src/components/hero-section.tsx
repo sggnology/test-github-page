@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import heroImage from "@/assets/luxury-modern-bathroom-with-premium-marble-tiles.jpg"
 
 export function HeroSection() {
   const scrollToContact = () => {
@@ -16,7 +17,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/luxury-modern-bathroom-with-premium-marble-tiles.jpg"
+          src={heroImage}
           alt="Premium tiles showcase"
           className="w-full h-full object-cover opacity-40"
         />

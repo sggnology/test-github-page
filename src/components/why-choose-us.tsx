@@ -1,3 +1,5 @@
+import craftsmanImage from "@/assets/craftsman-working-on-premium-tiles-workshop.jpg"
+
 export function WhyChooseUs() {
   return (
     <section id="about" className="py-24 lg:py-32 bg-muted/30">
@@ -38,7 +40,7 @@ export function WhyChooseUs() {
             </div>
           </div>
           <div className="relative">
-            <img src="/craftsman-working-on-premium-tiles-workshop.jpg" alt="Tile craftsmanship" className="rounded-xl shadow-2xl" />
+            <img src={craftsmanImage} alt="Tile craftsmanship" className="rounded-xl shadow-2xl" />
             <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-primary/20 rounded-xl -z-10" />
             <div className="absolute -top-6 -right-6 w-48 h-48 bg-accent/20 rounded-xl -z-10" />
           </div>

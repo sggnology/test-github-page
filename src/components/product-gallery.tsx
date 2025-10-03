@@ -1,36 +1,43 @@
 "use client"
 
 import { useState } from "react"
+import marbleImage from "@/assets/luxury-white-marble-tiles-elegant-bathroom.jpg"
+import woodImage from "@/assets/wood-look-porcelain-tiles-modern-living-room.jpg"
+import geometricImage from "@/assets/geometric-pattern-tiles-modern-kitchen-backsplash.jpg"
+import terracottaImage from "@/assets/terracotta-tiles-rustic-mediterranean-patio.jpg"
+import slateImage from "@/assets/natural-slate-stone-tiles-outdoor-pathway.jpg"
+import mosaicImage from "@/assets/mosaic-tiles-artistic-bathroom-feature-wall.jpg"
+import placeholderImage from "@/assets/placeholder.svg"
 
 const collections = [
   {
     title: "Marble Elegance",
-    image: "/luxury-white-marble-tiles-elegant-bathroom.jpg",
+    image: marbleImage,
     description: "Timeless marble designs",
   },
   {
     title: "Wood-Look Porcelain",
-    image: "/wood-look-porcelain-tiles-modern-living-room.jpg",
+    image: woodImage,
     description: "Natural warmth, modern durability",
   },
   {
     title: "Geometric Patterns",
-    image: "/geometric-pattern-tiles-modern-kitchen-backsplash.jpg",
+    image: geometricImage,
     description: "Bold contemporary statements",
   },
   {
     title: "Terracotta Collection",
-    image: "/terracotta-tiles-rustic-mediterranean-patio.jpg",
+    image: terracottaImage,
     description: "Mediterranean charm",
   },
   {
     title: "Slate & Stone",
-    image: "/natural-slate-stone-tiles-outdoor-pathway.jpg",
+    image: slateImage,
     description: "Rugged natural beauty",
   },
   {
     title: "Mosaic Artistry",
-    image: "/mosaic-tiles-artistic-bathroom-feature-wall.jpg",
+    image: mosaicImage,
     description: "Intricate handcrafted details",
   },
 ]
@@ -57,7 +64,7 @@ export function ProductGallery() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <img
-                src={collection.image || "/placeholder.svg"}
+                src={collection.image || placeholderImage}
                 alt={collection.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
