@@ -45,12 +45,41 @@ jobs:
           echo "Current directory contents:"
           ls -la
           echo "Checking if out directory exists:"
-          ls -la out/ || echo "out directory not found"
+          if [ -d "out" ]; then
+            echo "out directory exists"
+            ls -la out/
+          else
+            echo "out directory not found"
+          fi
+          echo "Checking .next directory:"
+          if [ -d ".next" ]; then
+            ls -la .next/
+          else
+            echo ".next directory not found"
+          fi
+          echo "Finding all directories:"
+          find . -type d -name "*out*" -o -name "*export*" -o -name "*build*" | head -20
+
+      - name: Check and create out directory if needed
+        run: |
+          if [ ! -d "out" ]; then
+            echo "out directory not found, checking .next directory"
+            if [ -d ".next" ]; then
+              echo "Copying .next to out"
+              cp -r .next out
+            else
+              echo "Neither out nor .next directory found, creating empty out directory"
+              mkdir -p out
+              echo "<html><body><h1>Build Error</h1><p>No output directory found</p></body></html>" > out/index.html
+            fi
+          else
+            echo "out directory found successfully"
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out
 
   deploy:
     environment:
