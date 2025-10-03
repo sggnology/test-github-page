@@ -6,8 +6,10 @@ const nextConfig = {
     unoptimized: true
   },
   // Temporarily disable basePath for testing
-  // basePath: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
-  // assetPrefix: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
+//   basePath: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
+//   assetPrefix: process.env.NODE_ENV === 'production' ? '/test-github-page' : '',
+  basePath: '/test-github-page',
+  assetPrefix: '/test-github-page',
 };
 
 export default nextConfig;
