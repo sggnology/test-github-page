@@ -6,7 +6,7 @@ import heroImage from "@/assets/luxury-modern-bathroom-with-premium-marble-tiles
 
 export function HeroSection() {
   const scrollToContact = () => {
-    const element = document.getElementById("contact")
+    const element = document.getElementById("contact-form")
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }

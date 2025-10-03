@@ -7,14 +7,31 @@ import { Menu, X } from "lucide-react"
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      const currentScrollY = window.scrollY
+      
+      // 스크롤 위치가 20px 이상일 때 배경 적용
+      setIsScrolled(currentScrollY > 20)
+      
+      // 스크롤 방향에 따라 헤더 숨기기/보이기
+      if (currentScrollY > lastScrollY && currentScrollY > 100 && !isMobileMenuOpen) {
+        // 아래로 스크롤 중이고 100px 이상일 때 숨기기 (모바일 메뉴가 닫혀있을 때만)
+        setIsHidden(true)
+      } else {
+        // 위로 스크롤 중이거나 상단 근처일 때 또는 모바일 메뉴가 열려있을 때 보이기
+        setIsHidden(false)
+      }
+      
+      setLastScrollY(currentScrollY)
     }
+    
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [lastScrollY, isMobileMenuOpen])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
@@ -28,6 +45,8 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+      } ${
+        isHidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">

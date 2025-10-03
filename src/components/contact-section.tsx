@@ -46,6 +46,10 @@ export function ContactSection() {
       // 환경변수가 설정되지 않은 경우 에러 처리
       if (!serviceId || !templateId || !publicKey) {
         console.error('EmailJS 환경변수가 설정되지 않았습니다.')
+        console.error('GitHub Secrets에 다음 환경변수를 설정해주세요:')
+        console.error('- VITE_EMAILJS_SERVICE_ID')
+        console.error('- VITE_EMAILJS_TEMPLATE_ID') 
+        console.error('- VITE_EMAILJS_PUBLIC_KEY')
         setSubmitStatus("error")
         return
       }
@@ -129,7 +133,7 @@ export function ContactSection() {
 
           {/* Contact Form */}
           <div className="bg-card rounded-xl p-8 shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium mb-2 text-card-foreground">
                   성명 *
@@ -216,7 +220,7 @@ export function ContactSection() {
               </Button>
 
               <Dialog open={isPreviewOpen} onOpenChange={setIsPreviewOpen}>
-                <DialogContent className="max-w-2xl">
+                <DialogContent className="max-w-lg">
                   <DialogHeader>
                     <DialogTitle>문의 내용 미리보기</DialogTitle>
                     <DialogDescription>
